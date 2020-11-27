@@ -1,0 +1,26 @@
+﻿@model WebappTasking.Models.TaskModel
+
+
+<h1>@(Model.Id != 0 ? "Edit" : "Create New") Task</h1><br /><br />
+
+<form method="post" id="upsertTask">
+    @if (Model.Id != 0)
+    {
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="DateCreated" />
+        <input type="hidden" asp-for="State" />
+    }
+<center>
+    <label asp-for="Name">Name</label>
+    <br /><input name="taskName" /><br />
+    <br /><label asp-for="TaskDescription">Task Description</label>
+    <br /><textarea name="taskDescription" form="upsertTask"></textarea><br>
+    <br /><button type="submit" style="background: #99DDFF;">@(Model.Id != 0 ? "Edit" : "Create")</button>
+    <a asp-action="Index">Back To Tasks</a>
+</center>
+</form>
+
+
+
+
+

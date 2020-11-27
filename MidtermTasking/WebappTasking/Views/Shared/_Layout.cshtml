@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MidtermTasking</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F7F7F7;
+            position: absolute;
+            height: 50%;
+            width: 100%;
+
+        }
+
+        header {
+            position: absolute;
+            height: 789px;
+            width: 140px;
+            background: #309f97;
+            
+        }
+
+        .footer{
+            position: relative;
+            top: 700px;
+            font-size: 10px;
+            padding: 0;
+            line-height:15px;
+            right:20px;
+
+        }
+
+        .navbar {
+            background: #3FD2C7;
+            font-size: 15px;
+            height: 60px;
+
+        }
+
+            .navbar .navbar-brand {
+                color: white;
+                line-height: 20px;
+                position: absolute;
+                top: 15px;
+                font-size: 15px;
+            }
+
+        .navbar-collapse {
+            position: absolute;
+            list-style: none;
+            text-decoration: none;
+            top: 90px;
+        }
+
+            .navbar-collapse ul a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                line-height: 50px;
+                box-sizing: border-box;
+                border-top: 2px solid white;
+                border-bottom: 2px solid white;
+                transition: .8s;
+            }
+
+
+        .navbar-nav li:hover a {
+            padding-left: 30px;
+        }
+
+
+
+
+      
+    </style>
+
+
+
+</head>
+<body>
+   
+    <header>
+        <nav class="navbar ">
+            <div class="container">
+
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MidTasking</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Task" asp-action="Index">Tasks</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer">
+                       &copy; 2020 - WebappTasking<br /><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#3FD2C7" fill-opacity="1" d="M0,256L12.6,240C25.3,224,51,192,76,154.7C101.1,117,126,75,152,48C176.8,21,202,11,227,48C252.6,85,278,171,303,186.7C328.4,203,354,149,379,122.7C404.2,96,429,96,455,96C480,96,505,96,531,90.7C555.8,85,581,75,606,69.3C631.6,64,657,64,682,80C707.4,96,733,128,758,149.3C783.2,171,808,181,834,181.3C858.9,181,884,171,909,176C934.7,181,960,203,985,181.3C1010.5,160,1036,96,1061,69.3C1086.3,43,1112,53,1137,80C1162.1,107,1187,149,1213,186.7C1237.9,224,1263,256,1288,266.7C1313.7,277,1339,267,1364,272C1389.5,277,1415,299,1427,309.3L1440,320L1440,0L1427.4,0C1414.7,0,1389,0,1364,0C1338.9,0,1314,0,1288,0C1263.2,0,1238,0,1213,0C1187.4,0,1162,0,1137,0C1111.6,0,1086,0,1061,0C1035.8,0,1011,0,985,0C960,0,935,0,909,0C884.2,0,859,0,834,0C808.4,0,783,0,758,0C732.6,0,707,0,682,0C656.8,0,632,0,606,0C581.1,0,556,0,531,0C505.3,0,480,0,455,0C429.5,0,404,0,379,0C353.7,0,328,0,303,0C277.9,0,253,0,227,0C202.1,0,177,0,152,0C126.3,0,101,0,76,0C50.5,0,25,0,13,0L0,0Z"></path>
+    </svg>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/task.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
